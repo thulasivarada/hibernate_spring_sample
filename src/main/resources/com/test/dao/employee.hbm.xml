@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.test.dao.Employee" table="employee">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name"/>
+        <property name="empID" column="empid"/>
+        <many-to-one name="department" column="dept_id" class="com.test.dao.Department" not-null="true"/>
+    </class>    
+</hibernate-mapping>
